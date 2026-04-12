@@ -12,7 +12,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _currentLayout = 0; // 0 = Masonry, 1 = Staggered, 2 = Sliver
+  int _currentLayout = 0; // 0 = Masonry, 1 = Staggered, 2 = Sliver (Tata Letak)
 
   final images = dummyImages;
 
@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _currentLayout == 2
-          ? null // Sliver grid has its own AppBar
+          ? null // Grid Sliver memiliki AppBar-nya sendiri
           : AppBar(
               title: const Text('Pinterest Gallery'),
               actions: [

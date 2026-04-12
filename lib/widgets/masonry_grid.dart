@@ -13,19 +13,19 @@ class MasonryGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // API #1: MasonryGridView.count() - Creates a grid with a fixed number of tiles in the cross axis.
+    // API #1: MasonryGridView.count() - Membuat kisi dengan jumlah ubin tetap pada sumbu silang.
     return MasonryGridView.count(
-      // API #2: crossAxisCount - The number of columns in the grid.
+      // API #2: crossAxisCount - Jumlah kolom dalam kisi.
       crossAxisCount: 2,
-      // API #3: mainAxisSpacing - The number of logical pixels between each item along the main axis.
+      // API #3: mainAxisSpacing - Jumlah piksel logis di antara setiap item di sepanjang sumbu utama.
       mainAxisSpacing: 8,
-      // API #4: crossAxisSpacing - The number of logical pixels between each item along the cross axis.
+      // API #4: crossAxisSpacing - Jumlah piksel logis di antara setiap item di sepanjang sumbu silang.
       crossAxisSpacing: 8,
-      // API #5: padding - Empty space around the whole grid.
+      // API #5: padding - Ruang kosong di sekitar seluruh kisi.
       padding: const EdgeInsets.all(8),
-      // API #6: itemCount - The total number of items to display.
+      // API #6: itemCount - Jumlah total item yang akan ditampilkan.
       itemCount: images.length,
-      // API #7: itemBuilder - The builder function for each grid item.
+      // API #7: itemBuilder - Fungsi pembangun untuk setiap item kisi.
       itemBuilder: (context, index) {
         return ImageTile(image: images[index]);
       },

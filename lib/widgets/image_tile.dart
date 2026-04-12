@@ -34,11 +34,11 @@ class ImageTile extends StatelessWidget {
               Image.network(
                 image.imageUrl,
                 fit: BoxFit.cover,
-                // Using a loader to avoid empty space while loading
+                // Menggunakan loader untuk menghindari ruang kosong saat memuat
                 loadingBuilder: (context, child, loadingProgress) {
                   if (loadingProgress == null) return child;
                   return Container(
-                    height: image.height.toDouble() / 2, // Approximate
+                    height: image.height.toDouble() / 2, // Perkiraan
                     color: Colors.grey[200],
                     child: Center(
                       child: CircularProgressIndicator(

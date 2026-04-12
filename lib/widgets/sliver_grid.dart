@@ -21,7 +21,7 @@ class SliverGridWidget extends StatelessWidget {
         ),
         SliverPadding(
           padding: const EdgeInsets.all(8),
-          // API #13: SliverMasonryGrid.count() - A sliver that displays items in a masonry layout.
+          // API #13: SliverMasonryGrid.count() - Sebuah sliver yang menampilkan item dalam tata letak masonry.
           sliver: SliverMasonryGrid.count(
             crossAxisCount: 2,
             mainAxisSpacing: 8,
