@@ -58,7 +58,14 @@ class _HomeScreenState extends State<HomeScreen> {
       case 1:
         return StaggeredGridWidget(images: images);
       case 2:
-        return SliverGridWidget(images: images);
+        return SliverGridWidget(
+          images: images,
+          onLayoutChanged: (value) {
+            setState(() {
+              _currentLayout = value;
+            });
+          },
+        );
       default:
         return MasonryGrid(images: images);
     }
