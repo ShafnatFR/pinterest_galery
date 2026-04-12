@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import '../models/image_item.dart';
@@ -44,7 +43,6 @@ class SliverGridWidget extends StatelessWidget {
         ),
         SliverPadding(
           padding: const EdgeInsets.all(8),
-          // API #13: SliverMasonryGrid.count() - Sebuah sliver yang menampilkan item dalam tata letak masonry.
           sliver: SliverMasonryGrid.count(
             crossAxisCount: 2,
             mainAxisSpacing: 8,

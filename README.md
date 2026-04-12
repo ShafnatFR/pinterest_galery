@@ -1,3 +1,3 @@
 # pinterest_galery
 
-A new Flutter project.
+## main.dart
