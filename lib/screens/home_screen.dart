@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:pinterest_galery/screens/dashboard_screen.dart';
 import '../data/dummy_data.dart';
 import '../widgets/masonry_grid.dart';
 import '../widgets/staggered_grid.dart';
 import '../widgets/sliver_grid.dart';
-import '../widgets/dashboard_grid.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _currentLayout == 2
+      appBar: (_currentLayout == 2 || _currentLayout == 3)
           ? null
           : AppBar(
               title: const Text('Pinterest Gallery'),
@@ -32,22 +32,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     });
                   },
                   itemBuilder: (context) => [
-                    const PopupMenuItem(
-                      value: 0,
-                      child: Text('Masonry Grid'),
-                    ),
+                    const PopupMenuItem(value: 0, child: Text('Masonry Grid')),
                     const PopupMenuItem(
                       value: 1,
                       child: Text('Staggered Grid'),
                     ),
-                    const PopupMenuItem(
-                      value: 2,
-                      child: Text('Sliver Grid'),
-                    ),
-                    const PopupMenuItem(
-                      value: 3,
-                      child: Text('Dashboard Grid (Premium)'),
-                    ),
+                    const PopupMenuItem(value: 2, child: Text('Sliver Grid')),
+                    const PopupMenuItem(value: 3, child: Text('Dashboard')),
                   ],
                 ),
               ],
@@ -72,7 +63,13 @@ class _HomeScreenState extends State<HomeScreen> {
           },
         );
       case 3:
-        return DashboardGridWidget(items: images);
+        return DashboardScreen(
+          onLayoutChanged: (value) {
+            setState(() {
+              _currentLayout = value;
+            });
+          },
+        );
       default:
         return MasonryGrid(images: images);
     }

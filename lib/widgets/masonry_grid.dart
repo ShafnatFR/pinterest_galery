@@ -6,10 +6,7 @@ import 'image_tile.dart';
 class MasonryGrid extends StatelessWidget {
   final List<ImageItem> images;
 
-  const MasonryGrid({
-    super.key,
-    required this.images,
-  });
+  const MasonryGrid({super.key, required this.images});
 
   @override
   Widget build(BuildContext context) {

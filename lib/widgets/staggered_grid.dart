@@ -6,10 +6,7 @@ import 'image_tile.dart';
 class StaggeredGridWidget extends StatelessWidget {
   final List<ImageItem> images;
 
-  const StaggeredGridWidget({
-    super.key,
-    required this.images,
-  });
+  const StaggeredGridWidget({super.key, required this.images});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +18,7 @@ class StaggeredGridWidget extends StatelessWidget {
         crossAxisSpacing: 8,
         children: List.generate(images.length, (index) {
           final image = images[index];
-          
+
           if (index % 7 == 0) {
             return StaggeredGridTile.count(
               crossAxisCellCount: 4,

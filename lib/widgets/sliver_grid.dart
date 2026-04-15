@@ -37,6 +37,10 @@ class SliverGridWidget extends StatelessWidget {
                   value: 2,
                   child: Text('Sliver Grid'),
                 ),
+                const PopupMenuItem(
+                  value: 3,
+                  child: Text('Dashboard'),
+                ),
               ],
             ),
           ],
