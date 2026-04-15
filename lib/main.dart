@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pinterest_galery/screens/home_screen.dart';
-import 'screens/dashboard_screen.dart';
 
 void main() => runApp(const MyApp());
 
