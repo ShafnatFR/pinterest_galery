@@ -3,6 +3,7 @@ import '../data/dummy_data.dart';
 import '../widgets/masonry_grid.dart';
 import '../widgets/staggered_grid.dart';
 import '../widgets/sliver_grid.dart';
+import '../widgets/dashboard_grid.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -43,6 +44,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       value: 2,
                       child: Text('Sliver Grid'),
                     ),
+                    const PopupMenuItem(
+                      value: 3,
+                      child: Text('Dashboard Grid (Premium)'),
+                    ),
                   ],
                 ),
               ],
@@ -66,6 +71,8 @@ class _HomeScreenState extends State<HomeScreen> {
             });
           },
         );
+      case 3:
+        return DashboardGridWidget(items: images);
       default:
         return MasonryGrid(images: images);
     }
